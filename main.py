@@ -32,9 +32,9 @@ def downstatus(statusfile,message):
 			txt = downread.read()
 		try:
 			bot.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{txt}**")
-			time.sleep(10)
+			time.sleep(4)
 		except:
-			time.sleep(5)
+			time.sleep(2)
 
 
 # upload status
@@ -49,9 +49,9 @@ def upstatus(statusfile,message):
 			txt = upread.read()
 		try:
 			bot.edit_message_text(message.chat.id, message.id, f"__Uploaded__ : **{txt}**")
-			time.sleep(10)
+			time.sleep(4)
 		except:
-			time.sleep(5)
+			time.sleep(2)
 
 
 # progress writter
@@ -140,7 +140,7 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 					except Exception as e: bot.send_message(message.chat.id,f"**Error** : __{e}__", reply_to_message_id=message.id)
 
 			# wait time
-			time.sleep(3)
+			time.sleep(2)
 
 
 # handle private
